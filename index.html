@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лаба5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <form id="form1" class="form">
+            <div class="form-item">
+                <input id="name" class="form-input" name="name" required placeholder="Иванов Иван Иванович">
+                <label for="name" class="form-item-label">ФИО</label>
+            </div>
+            <div class="form-item">
+                <input type="number" id="flatNumber" min="1" max="1000" class="form-input" name="flatNumber" required placeholder="10">
+                <label for="flatNumber" class="form-item-label">Номер квартиры</label>
+            </div>
+            <div class="form-item">
+                <input type="number" id="flatSquare" min="1" max="1000" class="form-input" name="flatSquare" required placeholder="10">
+                <label for="flatSquare" class="form-item-label">Площадь квартиры</label>
+            </div>
+            <div class="form-item">
+                <input type="text" class="form-input" name="privatized" id="privatized" required placeholder="Признак приватизации">
+                <label class="form-item-label">Приватизация квартиры</label>
+            </div>
+            <div class="form-item">
+                <select id="ids" class="form-select">
+                    <option selected="true" disabled="disabled">Записи</option>
+                </select>
+            </div>
+            <div class="form-input" id="input-tel">
+                <input class="form-input" type="tel" name="telephone" id="telephone" placeholder="+xxxxxxxxxxxx" pattern="\+\d{3}\d{2}\d{3}\d{2}\d{2}">
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Добавить запись" class="btn">
+                <input type="reset" value="Очистить форму" class="btn">
+                <button type="button" class="btn" id="showTable">Просмотреть все записи</button>
+                <button type="button" class="btn" id="deleteRow">Удалить запись с выбранным ID</button>
+                <button type="button" class="btn" id="minMaxSquare">Мин-Макс жилплощадь</button>
+                <button type="button" class="btn" id="addProperty">Добавить новое свойство</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <div id="content"></div>
+    </div>
+</div>
+<script src="mustache.js"></script>
+<script src="template.js"></script>
+<script src="script.js"> </script>
+</body>
+</html>
